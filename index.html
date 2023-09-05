@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caplinq Funtional Task</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Button to open modal -->
+    <button class="open-modal-btn" id="open-modal-btn">
+      Click here to open modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+      <div class="modal-content" id="modal-content">
+        <h2 class="title">Select Supplier</h2>
+        <div class="back-close-btn-container">
+          <img
+            class="back-btn"
+            src="./assets/arrow-left.png"
+            alt="back button"
+          />
+          <div class="placeholder-only"></div>
+          <img class="close-btn" src="./assets/x.png" alt="close button" />
+        </div>
+        <div class="search-bar-container">
+          <img
+            class="search-icon"
+            src="./assets/search.png"
+            alt="search icon"
+          />
+          <input
+            type="search"
+            class="search-input"
+            name="q"
+            placeholder="Search supplier"
+          />
+        </div>
+
+        <!-- Suppliers -->
+        <hr class="horizontal-rule-top" />
+        <div class="suppliers-container" id="suppliers"></div>
+
+        <!-- Products -->
+        <div class="products-container" id="products"></div>
+
+        <!-- Accordion/Child Products -->
+        <div class="accordion" id="accordion"></div>
+
+        <!-- Selection -->
+        <div class="selected-list"></div>
+
+        <!-- CTA Buttons -->
+        <hr class="horizontal-rule-bottom" />
+        <div class="cta-container">
+          <button class="product-selected" disabled>0 product selected</button>
+          <!-- placeholder button when product selected button is hidden -->
+          <div class="product-selected-btn-placeholder"></div>
+          <div class="cancel-add-btn-container">
+            <button class="cancel-btn" disabled>CANCEL</button>
+            <button class="add-btn" disabled>ADD</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast-container">
+      <div class="toast-left-side"></div>
+      <div class="toast-content">
+        <img class="check-icon" src="./assets/check.png" alt="check icon" />
+
+        <!-- Toast Message -->
+        <p class="toast-message"></p>
+        <div class="close-button-toast">
+          <img src="./assets/x.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
